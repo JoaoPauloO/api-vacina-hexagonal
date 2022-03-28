@@ -1,0 +1,12 @@
+version: "3"
+services:
+  pg-hexagonal:
+    container_name: pg-hexagonal
+    image: postgres:12.3
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_DB=hexagonal
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=hexagonal
+      - POSTGRES_HOST_AUTH_METHOD=trust
